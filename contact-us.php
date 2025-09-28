@@ -85,6 +85,7 @@
                             <div class="text">
                                 <h2>CALL US</h2>
                                 <p>(+234) 703 182 0696</p>
+                                <p>(+234) 814 704 4990</p>
                             </div>
                         </div>
                     </div>
@@ -106,7 +107,7 @@
             <section class="map-body-div">
                 <div class="map-back-div">
                     <iframe allowfullscreen="" class="google-map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15853.266080637166!2d3.373359617382806!3d6.607534600000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b93e7b64bfe6b%3A0xc6fda9ee31333fb!2sAr-Rahman%20Montessori%20Schools!5e0!3m2!1sen!2sng!4v1733854564466!5m2!1sen!2sng"></iframe>
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31691.107255229064!2d3.627375434808114!3d6.843953671825349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bd8d0e0df8253%3A0x61d9c04dd6972c02!2sSagamu%20121102%2C%20Ogun%20State!5e0!3m2!1sen!2sng!4v1759088881205!5m2!1sen!2sng"></iframe>
                 </div>
             </section>
         </div>

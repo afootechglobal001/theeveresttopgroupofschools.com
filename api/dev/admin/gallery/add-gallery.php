@@ -23,10 +23,9 @@ if ($apiKey!=$expected_api_key){
 
 		/////////////// Variable Declaration/////////////////
 		$page_category_id=trim(strtolower($_POST['page_category_id']));
-		$publish_id = $_POST['publish_id'];
+		$gallery_type_id=trim(($_POST['gallery_type_id'])); /// can be GENERAL GALLERY (GG) or CLASS GALLERY (CG)
 		$reg_title =str_replace("'", "\'", $_POST['reg_title']);
-		$gallery_sub_title = trim($_POST['gallery_sub_title']);
-		$class_gallery_sub_title = trim($_POST['class_gallery_sub_title']);
+		$class_name = trim($_POST['class_name']);
 		$reg_thumbnail=$_FILES['reg_thumbnail']['name'];
 		$status_id=trim($_POST['status_id']);
 			
@@ -39,6 +38,15 @@ if ($apiKey!=$expected_api_key){
 			goto end;
 		}		
 		
+		if ($gallery_type_id !== 'GG' && $gallery_type_id !== 'CG') {
+			$response = [
+				'response' => 100,
+				'success' => false,
+				'message' => 'INVALID GALLERY TYPE! Select a valid gallery type and try again.'
+			];
+			goto end;
+		}
+
 		if (empty($reg_title)){
 			$response = [
 				'response'=> 101,
@@ -48,23 +56,15 @@ if ($apiKey!=$expected_api_key){
 			goto end;
 		}
 
-		if (empty($gallery_sub_title) && empty($class_gallery_sub_title)) {
+		if ($gallery_type_id === 'CG' && empty($class_name)) {
 			$response = [
 				'response' => 102,
 				'success' => false,
-				'message' => 'Provide either GALLERY SUB TITLE or CLASS GALLERY SUB TITLE. At least one is required!'
+				'message' => 'CLASS NAME REQUIRED FOR CLASS GALLERY! Select class name and try again.'
 			];
 			goto end;
 		}
-		
-		if (!empty($gallery_sub_title) && !empty($class_gallery_sub_title)) {
-			$response = [
-				'response' => 103,
-				'success' => false,
-				'message' => 'You cannot provide both GALLERY SUB TITLE and CLASS GALLERY SUB TITLE at the same time. Choose one!'
-			];
-			goto end;
-		}
+
 
 		if (!$reg_thumbnail){
 			$response = [
@@ -97,30 +97,16 @@ if ($apiKey!=$expected_api_key){
 				$alert_detail="GALLERY REGISTRATION FAILED: Gallery with title $reg_title can not be registered as its already exist.";	
 				$callclass->_alert_sequence_and_update($conn,$login_staff_id,$login_staff_fullname,$login_role_id,$alert_detail,$ip_address,$system_name);
 				goto end;
-			}	
-
-			$class_sub_title_check=mysqli_query($conn,"SELECT class_gallery_sub_title FROM publish_tab WHERE class_gallery_sub_title='$class_gallery_sub_title'");
-			$class_sub_title_check=mysqli_num_rows($class_sub_title_check);
-
-			if ($class_sub_title_check>0){ 
-				$response = [
-					'response' => 107,
-					'success' => false,
-					'message' => "CLASS SUB GALLERY TITLE NOT ACCETABLE! $class_gallery_sub_title already exist"
-				]; 
-
-				$alert_detail="GALLERY REGISTRATION FAILED: Class Sub Gallery with title $class_gallery_sub_title can not be registered as its already exist.";	
-				$callclass->_alert_sequence_and_update($conn,$login_staff_id,$login_staff_fullname,$login_role_id,$alert_detail,$ip_address,$system_name);
-				goto end;
-			}	
+			}
 				
 				//////////////geting sequence//////////////////////////
-				$sequence=$callclass->_get_sequence_count($conn, 'GALL');
+				$key='GALL';
+				$sequence=$callclass->_get_sequence_count($conn, $key);
 				$array = json_decode($sequence, true);
 				$no= $array[0]['no'];
 
 				/// Generate Publish ID ///////
-				$publish_id='GALL'.$no.date("Ymdhis");
+				$publish_id=$key.$no.date("Ymdhis");
 
 				$allowedExts = array("jpg", "jpeg", "JPEG", "JPG", "gif", "png","PNG","GIF","webp","WEBP");
 				$extension = pathinfo($_FILES['reg_thumbnail']['name'], PATHINFO_EXTENSION);
@@ -135,7 +121,7 @@ if ($apiKey!=$expected_api_key){
 				}
 
 					$datetime = date("Ymdhi");
-					$reg_thumbnail = $publish_id . '_' . $datetime . '_' . $reg_thumbnail;
+					$reg_thumbnail = $publish_id . '_' . $datetime.'.'.$extension;
 					$uploadPath = $galleryProfilePixPath . $reg_thumbnail;
 			
 					if (!move_uploaded_file($_FILES["reg_thumbnail"]["tmp_name"], $uploadPath)) {
@@ -149,8 +135,8 @@ if ($apiKey!=$expected_api_key){
 			
 						/// Insert Into Sermon Publish Tab///////
 						mysqli_query($conn,"INSERT INTO `publish_tab`
-						(`page_category_id`, `publish_id`, `reg_title`, `gallery_sub_title`, `class_gallery_sub_title`, `reg_pix`, `status_id`, `modified_by`, `created_time`, `updated_time`) VALUES  
-						('$page_category_id', '$publish_id', '$reg_title', '$gallery_sub_title', '$class_gallery_sub_title', '$reg_thumbnail', '$status_id', '$login_staff_id', NOW(), NOW())")or die (mysqli_error($conn));
+						(`page_category_id`, `publish_id`, `reg_title`, `gallery_type_id`, `class_name`, `reg_pix`, `status_id`, `modified_by`, `created_time`, `updated_time`) VALUES  
+						('$page_category_id', '$publish_id', '$reg_title', '$gallery_type_id', '$class_name', '$reg_thumbnail', '$status_id', '$login_staff_id', NOW(), NOW())")or die (mysqli_error($conn));
 
 						$page_cat_array=$callclass->_get_setup_page_category_detail($conn, $page_category_id);
 						$fetch_page_cat = json_decode($page_cat_array, true);

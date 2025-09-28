@@ -37,11 +37,11 @@ if ($apiKey!=$expected_api_key){
 
 		$select=
 			"SELECT
-			a.page_category_id, a.publish_id, a.reg_title, a.gallery_sub_title, a.class_gallery_sub_title, a.reg_pix, a.status_id, a.modified_by, a.created_time, a.updated_time, a.page_view, b.status_name
+			a.page_category_id, a.publish_id, a.reg_title, a.gallery_type_id, a.class_name, a.reg_pix, a.status_id, a.modified_by, a.created_time, a.updated_time, a.page_view, b.status_name
 			FROM publish_tab a, setup_status_tab b
 			WHERE 
 			a.publish_id LIKE '%$publish_id%' AND a.status_id LIKE '%$status_id%' AND
-			(a.reg_title LIKE '%$search_keywords%' OR a.gallery_sub_title LIKE '%$search_keywords%' OR a.class_gallery_sub_title LIKE '%$search_keywords%') AND
+			(a.reg_title LIKE '%$search_keywords%' OR a.class_name LIKE '%$search_keywords%') AND
 			a.status_id=b.status_id AND a.page_category_id='$page_category_id' ORDER BY a.reg_title ASC";
 		
 			$query=mysqli_query($conn,$select)or die (mysqli_error($conn));

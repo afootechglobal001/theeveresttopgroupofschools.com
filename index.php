@@ -135,7 +135,7 @@
                                 </div>
 
                                 <div class="text-div">
-                                    <h3>ADEKOGBE OLUWASEUN</h3>
+                                    <h3>ODUKOGBE OLUWASEUN</h3>
                                     <p>Proprietor</p>
                                 </div>
                             </div>
