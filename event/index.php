@@ -4,19 +4,20 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <?php include '../meta.php'?>
-    <title><?php echo $thename?> | Events | Celebrate Montessori Achievements</title>  
-    <meta name="keywords" content="<?php echo $thename?>, Ar-Rahman Montessori events, Montessori school activities Lagos, upcoming school events, child-centered education events, early childhood education programs Lagos, Montessori workshops Nigeria, Lagos Montessori celebrations, preschool and primary school events, family-friendly events Lagos, school calendar Montessori Lagos, creativity-focused events, holistic education activities Nigeria, innovative teaching events, nurturing creativity programs, collaborative learning events, educational excellence celebrations Lagos" />
-    <meta name="description" content="Stay updated with Ar-Rahman Montessori Schools events. Join us for workshops, celebrations, and activities that foster creativity, collaboration, and critical thinking." />
+    <title><?php echo $thename?> | Events | Celebrate Excellence</title>  
+    <meta name="keywords" content="<?php echo $thename?>, Everest Top Group of Schools events, Everest Top Academy Sagamu activities, school calendar Ogun State, upcoming events Sagamu schools, private schools Ogun State programs, international schools Sagamu celebrations, Everest Top Schools workshops, Sagamu Ogun State educational events, Everest Top Academy achievements, school cultural events Ogun State, creativity-focused programs, holistic education activities Sagamu, innovative teaching events, family-friendly school events Sagamu, educational excellence celebrations" />
+    <meta name="description" content="Stay updated with The Everest Top Group of Schools events in Sagamu, Ogun State. Join us for workshops, celebrations, and activities that foster creativity, collaboration, and academic excellence." />
 
-    <meta property="og:title" content="<?php echo $thename?> | Events | Celebrate Montessori Achievements" />
-    <meta property="og:image" content="<?php echo $website_url?>/all-images/plugin-pix/arrahmanmontessori.jpg" />
-    <meta property="og:description" content="Stay updated with Ar-Rahman Montessori Schools events. Join us for workshops, celebrations, and activities that foster creativity, collaboration, and critical thinking.." />
+    <meta property="og:title" content="<?php echo $thename?> | Events | Celebrate Excellence" />
+    <meta property="og:image" content="<?php echo $website_url?>/all-images/plugin-pix/everesttopacademy.jpg" />
+    <meta property="og:description" content="Stay updated with The Everest Top Group of Schools events in Sagamu, Ogun State. Join us for workshops, celebrations, and activities that foster creativity, collaboration, and academic excellence." />
 
-    <meta name="twitter:title" content="<?php echo $thename?> | Events | Celebrate Montessori Achievements" />
+    <meta name="twitter:title" content="<?php echo $thename?> | Events | Celebrate Excellence" />
     <meta name="twitter:card" content="<?php echo $thename?>" />
-    <meta name="twitter:image" content="<?php echo $website_url?>/all-images/plugin-pix/arrahmanmontessori.jpg" />
-    <meta name="twitter:description" content="Stay updated with Ar-Rahman Montessori Schools events. Join us for workshops, celebrations, and activities that foster creativity, collaboration, and critical thinking." />
+    <meta name="twitter:image" content="<?php echo $website_url?>/all-images/plugin-pix/everesttopacademy.jpg" />
+    <meta name="twitter:description" content="Stay updated with The Everest Top Group of Schools events in Sagamu, Ogun State. Join us for workshops, celebrations, and activities that foster creativity, collaboration, and academic excellence." />
 </head>
+
 <body>
     <?php  include '../header.php'?>
 

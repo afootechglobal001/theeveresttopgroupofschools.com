@@ -5,18 +5,19 @@
 <head>
     <?php include '../meta.php'?>
     <title><?php echo $thename?> | Blog | Insights</title>  
-    <meta name="keywords" content="<?php echo $thename?>, Ar-Rahman Montessori blog, Montessori education insights, Lagos Montessori blog, child-centered learning articles, early childhood education tips, hands-on learning blogs, best Montessori school in Lagos, parenting and education tips Nigeria, innovative teaching ideas Lagos, holistic education blog, nurturing creativity articles, collaborative learning advice, preschool and primary school blog, educational excellence Nigeria, creative learning methods" />
-    <meta name="description" content="Explore Ar-Rahman Montessori Schools' blog for insights into Montessori education, parenting tips, and innovative teaching methods. Stay informed and inspired." />
+    <meta name="keywords" content="<?php echo $thename?>, Everest Top Group of Schools blog, Everest Top Academy Sagamu insights, education blog Ogun State, private schools Sagamu articles, parenting and education tips Nigeria, innovative teaching ideas Ogun State, holistic education blog, nurturing creativity articles, collaborative learning advice, preschool and college blog, academic excellence Nigeria, creative learning methods, Sagamu schools news" />
+    <meta name="description" content="Explore The Everest Top Group of Schools' blog for insights on education, parenting tips, and innovative teaching methods. Stay informed and inspired about learning in Sagamu, Ogun State." />
 
     <meta property="og:title" content="<?php echo $thename?> | Blog | Insights" />
-    <meta property="og:image" content="<?php echo $website_url?>/all-images/plugin-pix/arrahmanmontessori.jpg" />
-    <meta property="og:description" content="zExplore Ar-Rahman Montessori Schools' blog for insights into Montessori education, parenting tips, and innovative teaching methods. Stay informed and inspired." />
+    <meta property="og:image" content="<?php echo $website_url?>/all-images/plugin-pix/everesttopacademy.jpg" />
+    <meta property="og:description" content="Explore The Everest Top Group of Schools' blog for insights on education, parenting tips, and innovative teaching methods. Stay informed and inspired about learning in Sagamu, Ogun State." />
 
     <meta name="twitter:title" content="<?php echo $thename?> | Blog | Insights" />
     <meta name="twitter:card" content="<?php echo $thename?>" />
-    <meta name="twitter:image" content="<?php echo $website_url?>/all-images/plugin-pix/arrahmanmontessori.jpg" />
-    <meta name="twitter:description" content="Explore Ar-Rahman Montessori Schools' blog for insights into Montessori education, parenting tips, and innovative teaching methods. Stay informed and inspired." />
+    <meta name="twitter:image" content="<?php echo $website_url?>/all-images/plugin-pix/everesttopacademy.jpg" />
+    <meta name="twitter:description" content="Explore The Everest Top Group of Schools' blog for insights on education, parenting tips, and innovative teaching methods. Stay informed and inspired about learning in Sagamu, Ogun State." />
 </head>
+
 
 <body>
     <?php  include '../header.php'?>

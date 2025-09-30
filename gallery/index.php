@@ -6,23 +6,20 @@
 
 <head>
     <?php include '../meta.php'?>
-    <title><?php echo $thename?> Gallery | Discover Our Montessori Journey</title>
-    <meta name="keywords"
-        content="<?php echo $thename?>, Ar-Rahman Montessori gallery, Montessori school photos Lagos, hands-on learning images, child-centered education visuals, early childhood education gallery, creative learning Lagos photos, preschool and primary school events, safe learning environment gallery, best Montessori school in Lagos gallery, holistic education images Nigeria, innovative teaching visuals, Lagos Montessori moments, nurturing creativity photos, collaborative learning highlights, educational excellence snapshots" />
-    <meta name="description"
-        content="Explore the Ar-Rahman Montessori Schools gallery showcasing vibrant moments of hands-on learning, creativity, and collaboration. Discover our safe, nurturing environment through visuals of events and activities." />
+    <title><?php echo $thename?> | Gallery | Discover Our Learning Journey</title>
+    <meta name="keywords" content="<?php echo $thename?>, Everest Top Group of Schools gallery, Everest Top Academy Sagamu photos, school events Ogun State images, private schools Sagamu gallery, international schools Sagamu visuals, Everest Top Schools classrooms, Sagamu Ogun State education highlights, Everest Top Academy activities, safe learning environment Sagamu, creativity-focused gallery, holistic education images, innovative teaching visuals, nurturing creativity photos, collaborative learning highlights, academic excellence snapshots" />
+    <meta name="description" content="Explore the gallery of The Everest Top Group of Schools in Sagamu, Ogun State. Discover vibrant moments of learning, creativity, and collaboration in a safe and nurturing environment." />
 
-    <meta property="og:title" content="<?php echo $thename?> Gallery | Discover Our Montessori Journey" />
-    <meta property="og:image" content="<?php echo $website_url?>/all-images/plugin-pix/arrahmanmontessori.jpg" />
-    <meta property="og:description"
-        content="Explore the Ar-Rahman Montessori Schools gallery showcasing vibrant moments of hands-on learning, creativity, and collaboration. Discover our safe, nurturing environment through visuals of events and activities." />
+    <meta property="og:title" content="<?php echo $thename?> | Gallery | Discover Our Learning Journey" />
+    <meta property="og:image" content="<?php echo $website_url?>/all-images/plugin-pix/everesttopacademy.jpg" />
+    <meta property="og:description" content="Explore the gallery of The Everest Top Group of Schools in Sagamu, Ogun State. Discover vibrant moments of learning, creativity, and collaboration in a safe and nurturing environment." />
 
-    <meta name="twitter:title" content="<?php echo $thename?> Gallery | Discover Our Montessori Journey" />
+    <meta name="twitter:title" content="<?php echo $thename?> | Gallery | Discover Our Learning Journey" />
     <meta name="twitter:card" content="<?php echo $thename?>" />
-    <meta name="twitter:image" content="<?php echo $website_url?>/all-images/plugin-pix/arrahmanmontessori.jpg" />
-    <meta name="twitter:description"
-        content="Explore the Ar-Rahman Montessori Schools gallery showcasing vibrant moments of hands-on learning, creativity, and collaboration. Discover our safe, nurturing environment through visuals of events and activities." />
+    <meta name="twitter:image" content="<?php echo $website_url?>/all-images/plugin-pix/everesttopacademy.jpg" />
+    <meta name="twitter:description" content="Explore the gallery of The Everest Top Group of Schools in Sagamu, Ogun State. Discover vibrant moments of learning, creativity, and collaboration in a safe and nurturing environment." />
 </head>
+
 
 <body>
     <?php  include '../header.php'?>

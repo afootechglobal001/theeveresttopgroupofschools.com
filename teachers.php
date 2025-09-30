@@ -5,18 +5,19 @@
 <head>
     <?php include 'meta.php'?>
     <title><?php echo $thename?> | Teachers</title>
-    <meta name="keywords" content="<?php echo $thename?>, About Our Teachers in Ar-Rahman Montessori, creative learning Lagos, early childhood education, hands-on learning, collaborative learning, critical thinking school, best Montessori school in Nigeria, safe learning environment, Montessori education Nigeria, early childhood education, safe learning environment, preschool Lagos, primary school Lagos, innovative teaching, child-centered learning, Lagos Montessori, nurturing creativity, holistic education, educational excellence" />
-    <meta name="description" content=" About Our Teachers in Ar-Rahman Montessori Schools in Lagos, where creativity and curiosity thrive. We provide hands-on, collaborative learning to inspire critical thinking and success." />
+    <meta name="keywords" content="<?php echo $thename?>, Everest Top Group of Schools teachers, Everest Top Academy Sagamu teachers, qualified teachers Ogun State, best schools in Sagamu teachers, private school educators Sagamu, international schools Sagamu faculty, Everest Top Schools teaching staff, dedicated teachers Ogun State, professional educators in Sagamu, Everest Top Academy instructors, top private schools in Ogun State teachers" />
+    <meta name="description" content="Meet the dedicated teachers of The Everest Top Group of Schools, Sagamu, Ogun State. Our professional educators are committed to nurturing creativity, critical thinking, and academic excellence." />
 
     <meta property="og:title" content="<?php echo $thename?> | Teachers" />
-    <meta property="og:image" content="<?php echo $website_url?>/all-images/plugin-pix/arrahmanmontessori.jpg" />
-    <meta property="og:description" content=" About Our Teachers in Ar-Rahman Montessori Schools in Lagos, where creativity and curiosity thrive. We provide hands-on, collaborative learning to inspire critical thinking and success." />
+    <meta property="og:image" content="<?php echo $website_url?>/all-images/plugin-pix/everesttopacademy.jpg" />
+    <meta property="og:description" content="Meet the dedicated teachers of The Everest Top Group of Schools, Sagamu, Ogun State. Our professional educators are committed to nurturing creativity, critical thinking, and academic excellence." />
 
     <meta name="twitter:title" content="<?php echo $thename?> | Teachers" />
     <meta name="twitter:card" content="<?php echo $thename?>" />
-    <meta name="twitter:image" content="<?php echo $website_url?>/all-images/plugin-pix/arrahmanmontessori.jpg" />
-    <meta name="twitter:description"  content=" About Our Teachers in Ar-Rahman Montessori Schools in Lagos, where creativity and curiosity thrive. We provide hands-on, collaborative learning to inspire critical thinking and success." />
+    <meta name="twitter:image" content="<?php echo $website_url?>/all-images/plugin-pix/everesttopacademy.jpg" />
+    <meta name="twitter:description" content="Meet the dedicated teachers of The Everest Top Group of Schools, Sagamu, Ogun State. Our professional educators are committed to nurturing creativity, critical thinking, and academic excellence." />
 </head>
+
 <body>
     <?php  include 'header.php'?>
 
