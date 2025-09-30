@@ -33,7 +33,7 @@
             </div>
             <div class="text-content-div" data-aos="fade-in" data-aos-duration="900">
                 <h1 data-aos="fade-in" data-aos-duration="800"><span>Our Teachers</span></h1>
-                <p>Welcome to AR-RAHMAN MONTESSORI SCHOOLS, where we inspire young minds, foster creativity, and empower students to reach their full potential.</p>                
+                <p>Welcome to The Everest Top Group Of Schools, where we inspire young minds, foster creativity, and empower students to reach their full potential.</p>                
            
                 <?php $callclass->_otherPagesBtn($website_url);?>
             </div>

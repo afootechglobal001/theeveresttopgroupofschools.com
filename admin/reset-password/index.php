@@ -24,7 +24,7 @@
                 </div>
                 
                 <div class="inner-div">
-                    <h2>Welcome to Ar-Rahman Montessori Schools Administrative Portal</h2>
+                    <h2>Welcome to The Everest Top Group Of Schools Schools Administrative Portal</h2>
                     <p>Where we inspire young minds, foster creativity, and empower students to reach their full potential.</p>
                 </div>
             </div>

@@ -58,7 +58,7 @@ $message='
                 Kindly click on the link below to complete your reset password process.<br/>
                 <a href="' . $websiteUrl . '/admin/reset-password/?ref=' . $access_key . '">Reset Password</a>
             </p>
-            <p><strong>Ar-Rahman Montessori Schools</strong>, we deliver high-quality education and training, equipping students with knowledge, skills, and strong moral values to excel and thrive in their academic journey and beyond. <br/> 
+            <p><strong>' . $thename . '</strong>, we deliver high-quality education and training, equipping students with knowledge, skills, and strong moral values to excel and thrive in their academic journey and beyond. <br/> 
             <strong>Be Inspired,</strong><br/> 
             <img src="cid:logo" width="150px" style="padding:5px; background:#fff; margin-top:10px;"></p>
         </div>
@@ -78,7 +78,7 @@ $message='
     $mail->addAddress("afootechglobal@gmail.com", "AfooTECH Global");  // Additional recipient
 
     // Attach images
-    $mail->addEmbeddedImage('../../config/mail/admin/img/mail_header.png', 'mail_header');
+    $mail->addEmbeddedImage('../../config/mail/admin/img/mail_header.jpg', 'mail_header');
     $mail->addEmbeddedImage('../../config/mail/admin/img/logo.png', 'logo');
 
     // Send the email
