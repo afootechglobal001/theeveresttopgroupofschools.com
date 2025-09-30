@@ -7,7 +7,7 @@
 	//$website_url='https://theeveresttopgroupofschools.com
 	$portalUrl=$website_url.'/portal';
 
-	$code_version='10.19';
+	$code_version = date('Ymdhis');
 ?>
 
 <script>

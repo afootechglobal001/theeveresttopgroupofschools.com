@@ -1880,6 +1880,7 @@ header .header-div-in .inner-div nav .mobile-btn:hover {
   display: flex;
   align-items: center;
   gap: 15px;
+  margin-top: 30px;
 }
 
 .blog-back-div .blog-div {
@@ -2674,6 +2675,7 @@ header .header-div-in .inner-div nav .mobile-btn:hover {
   min-height: 450px;
   display: flex;
   flex-direction: column;
+  gap: 10px;
   cursor: pointer;
   border-bottom: #f1f1f1 1px solid;
 }
@@ -3147,6 +3149,17 @@ header .header-div-in .inner-div nav .mobile-btn:hover {
   padding: 20px 0px;
 }
 
+.main-pages-content-div p{
+  padding: 0px;
+  margin: 0px;
+  line-height: 25px;
+}
+
+.main-pages-content-div h1, h2, h3, h4, h5, h6{
+  padding: 0px;
+  margin: 0px;
+}
+
 .comment-back-div {
   width: 100%;
   margin-top: 10px;
@@ -3291,11 +3304,12 @@ header .header-div-in .inner-div nav .mobile-btn:hover {
 }
 
 .general-faq-div .main-faq-title {
-  box-shadow: none;
+  padding: 20px 25px;
+  box-shadow: 0px 0px 10px 3px rgba(83, 83, 83, 0.1);
 }
 
 .general-faq-div .main-faq-title:hover {
-  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 10px 3px rgba(83, 83, 83, 0.2);
 }
 
 .general-faq-div .faq-title .inner-title-div {

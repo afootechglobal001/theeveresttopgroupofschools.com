@@ -88,7 +88,6 @@ function _get_publish_detail($conn, $publish_id){
 		$page_category_id=$fetch['page_category_id'];
 		$publish_id=$fetch['publish_id'];
 		$reg_title=$fetch['reg_title'];
-		$sermon_speaker=$fetch['sermon_speaker'];
 		$reg_pix=$fetch['reg_pix'];
 		$status_id=$fetch['status_id'];
 		$login_staff_id=$fetch['modified_by'];
@@ -99,7 +98,7 @@ function _get_publish_detail($conn, $publish_id){
 		$faq_cat_id=$fetch['faq_cat_id'];
 		
 	return '[{"page_category_id":"'.$page_category_id.'","publish_id":"'.$publish_id.'","reg_title":"'.$reg_title.'",
-	"sermon_speaker":"'.$sermon_speaker.'","reg_pix":"'.$reg_pix.'","status_id":"'.$status_id.'",
+	"reg_pix":"'.$reg_pix.'","status_id":"'.$status_id.'",
 	"login_staff_id":"'.$login_staff_id.'","created_time":"'.$created_time.'","updated_time":"'.$updated_time.'",
 	"blog_cat_id":"'.$blog_cat_id.'","blog_view":"'.$blog_view.'","faq_cat_id":"'.$faq_cat_id.'"}]';
 }	

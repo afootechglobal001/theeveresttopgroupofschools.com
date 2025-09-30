@@ -16,7 +16,7 @@
                 <?php } ?>
 
                 <?php if ($page_category_id == 'gallery_category') { ?>
-                <li title="Upload Picture" id="picture_page"
+                <li class="active-li" title="Upload Picture" id="picture_page"
                     onclick="_check_page_content('picture_page','picture-page', '<?php echo $publish_id ?>')">Upload
                     Picture</li>
                 <?php } ?>
@@ -479,19 +479,23 @@ _fetchEachEvent('<?php echo $page_category_id ?>', '<?php echo $publish_id ?>');
             </div>
 
             <div class="text_field_container">
+                <select id="gallery_type_id" class="text_field" placeholder=""
+                    onchange="_checkGalleryType(this.value);">
+                    <option value="">-Select here</option>
+                    <script>
+                    _getSelectGalleryType('gallery_type_id');
+                    </script>
+                </select>
+                <div class="placeholder">--Select Gallery Type--</div>
+            </div>
+            <div class="text_field_container">
                 <input class="text_field" type="text" id="reg_title" placeholder="" />
                 <div class="placeholder">Gallery Title:</div>
             </div>
 
-            <div class="text_field_container">
-                <input class="text_field" type="text" id="gallery_sub_title" placeholder="" />
-                <div class="placeholder">Gallery Sub Title:</div>
-            </div>
-
-
-            <div class="text_field_container">
-                <input class="text_field" type="text" id="class_gallery_sub_title" placeholder="" />
-                <div class="placeholder">Class Gallery Sub Title:</div>
+            <div class="text_field_container" id="class_name_div" style="display:none">
+                <input class="text_field" type="text" id="class_name" placeholder="" />
+                <div class="placeholder">Class Name:</div>
             </div>
 
             <div class="title">UPLOAD GALLERY PICTURE: <i>(JPG, PNG FORMAT ONLY)</i> <span>*</span></div>

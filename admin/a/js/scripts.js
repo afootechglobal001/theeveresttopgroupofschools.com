@@ -1988,8 +1988,7 @@ function _fetchAllGallery(page_category_id) {
 					<h2>${reg_title}</h2>
 					<div class="text-in">
 						<div class="text">
-						UPDATED ON: <span>${formattedDate}</span> | 
-						<span>${page_view}</span> VIEWS
+						UPDATED ON: <span>${formattedDate}</span>
 						</div>
 					</div>
 					</div>
@@ -2028,19 +2027,20 @@ function _fetchEachGallery(categoryIdToFind, publishId) {
   );
 
   const reg_title = gallery.reg_title;
-  const gallery_sub_title = gallery.gallery_sub_title;
-  const class_gallery_sub_title = gallery.class_gallery_sub_title;
+  const gallery_type_id = gallery.gallery_type_id;
+  const gallery_type_name = gallery.gallery_type_name;
+  const class_name = gallery.class_name;
   const reg_pix = gallery.reg_pix;
   const status_id = gallery.status_id;
   const status_name = gallery.status_name;
   const updated_time = gallery.updated_time;
   const documentStoragePath = gallery.documentStoragePath;
   const formattedDate = formatDate(updated_time);
-  const page_view = gallery.page_view;
 
   $("#reg_title").val(reg_title);
-  $("#gallery_sub_title").val(gallery_sub_title);
-  $("#class_gallery_sub_title").val(class_gallery_sub_title);
+  $("#class_name").val(class_name);
+  $("#formattedDate").html(formattedDate);
+  $("#summary_reg_title").html(reg_title);
   $("#gallery_preview_pix").attr("src", documentStoragePath + "/" + reg_pix);
   $("#uptd_status_id").append(
     '<option value="' +
@@ -2050,10 +2050,22 @@ function _fetchEachGallery(categoryIdToFind, publishId) {
       "</option>"
   );
 
-  $("#summary_reg_title").html(reg_title);
-  $("#gallery_sub_title").html(gallery_sub_title);
-  $("#formattedDate").html(formattedDate);
-  $("#page_view").html(page_view);
+  $("#gallery_type_id").append(
+    '<option value="' +
+      gallery_type_id +
+      '" selected="selected">' +
+      gallery_type_name +
+      "</option>"
+  );
+
+  if (gallery_type_id === "CG") {
+    $("#class_name_div").fadeIn(1000);
+
+    let showText = `<div class="top-text"><span>${class_name}</span></div>`;
+    $("#textContainer").html(showText);
+  } else {
+    $("#textContainer").hide();
+  }
 }
 function _checkGalleryType(id) {
   if (id === "CG") {
@@ -2081,12 +2093,12 @@ function _addGallery(page_category_id) {
     }
     if (!reg_title) {
       $("#reg_title").addClass("issue");
-      _actionAlert("Provide Event Title to continue", false);
+      _actionAlert("Provide Gallery Title to continue", false);
       return;
     }
     if (gallery_type_id === "CG" && !class_name) {
       $("#class_name").addClass("issue");
-      _actionAlert("Select Class Name to continue", false);
+      _actionAlert("Provide Class Name to continue", false);
       return;
     }
 
@@ -2163,30 +2175,30 @@ function _addGallery(page_category_id) {
 function _updateGallery(page_category_id, publish_id) {
   try {
     const reg_title = $("#reg_title").val();
-    const gallery_sub_title = $("#gallery_sub_title").val();
-    const class_gallery_sub_title = $("#class_gallery_sub_title").val();
+    const gallery_type_id = $("#gallery_type_id").val(); /// can be GENERAL GALLERY (GG) or CLASS GALLERY (CG)
+    const class_name = $("#class_name").val();
     const updt_gallery_pix = $("#reg_thumbnail").prop("files")[0];
     const status_id = $("#uptd_status_id").val();
 
     $(
-      "#reg_title, #gallery_sub_title, #class_gallery_sub_title, #reg_thumbnail, #uptd_status_id"
+      "#reg_title, #gallery_type_id, #class_name, #reg_thumbnail, #uptd_status_id"
     ).removeClass("issue");
 
     if (!reg_title) {
       $("#reg_title").addClass("issue");
-      _actionAlert("Provide Event Title to continue", false);
+      _actionAlert("Provide Gallery Title to continue", false);
       return;
     }
 
-    if (
-      (!gallery_sub_title && !class_gallery_sub_title) ||
-      (gallery_sub_title && class_gallery_sub_title)
-    ) {
-      $("#gallery_sub_title, #class_gallery_sub_title").addClass("issue");
-      _actionAlert(
-        "Provide either Gallery Sub Title or Class Gallery Sub Title, but not both",
-        false
-      );
+    if (!gallery_type_id) {
+      $("#gallery_type_id").addClass("issue");
+      _actionAlert("Select Gallery Type to continue", false);
+      return;
+    }
+   
+    if (gallery_type_id === "CG" && !class_name) {
+      $("#class_name").addClass("issue");
+      _actionAlert("Provide Class Name to continue", false);
       return;
     }
 
@@ -2196,9 +2208,6 @@ function _updateGallery(page_category_id, publish_id) {
       return;
     }
 
-    $(
-      "#reg_title, #gallery_sub_title, #class_gallery_sub_title, #reg_thumbnail, #uptd_status_id"
-    ).removeClass("issue");
 
     if (confirm("Confirm!!\n\n Are you sure to PERFORM THIS ACTION?")) {
       const btn_text = $("#update_btn").html();
@@ -2213,8 +2222,8 @@ function _updateGallery(page_category_id, publish_id) {
       form_data.append("page_category_id", page_category_id);
       form_data.append("publish_id", publish_id);
       form_data.append("reg_title", reg_title);
-      form_data.append("gallery_sub_title", gallery_sub_title);
-      form_data.append("class_gallery_sub_title", class_gallery_sub_title);
+      form_data.append("gallery_type_id", gallery_type_id);
+      form_data.append("class_name", class_name);
       form_data.append("reg_thumbnail", updt_gallery_pix);
       form_data.append("status_id", status_id);
 

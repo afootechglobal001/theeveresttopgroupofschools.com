@@ -54,7 +54,6 @@ $message='
             <p>'.$message.'</p>
         </div>
     </div>';
-
   
     $mail->Subject = $subject;
     $mail->Body    = $message;
@@ -62,11 +61,6 @@ $message='
     
     /// copy this emails
     $mail->addAddress($support_email, $sender_name);  // Support email
-    $mail->addAddress('ketubasic@arrahmanmontessori.com', 'Ar-rahman Montessorri Ketu');
-    $mail->addAddress('ketucollege@arrahmanmontessori.com', 'Ar-rahman College Ketu');
-    $mail->addAddress('ojotabasic@arrahmanmontessori.com', 'Ar-rahman Montessorri Ojota');
-    $mail->addAddress('ojotacollege@arrahmanmontessori.com', 'Ar-rahman College Ojota');
-    $mail->addAddress('arrahmanmontessori@gmail.com', 'Ar-rahman Admin');
     $mail->addAddress('afootechglobal@gmail.com', 'AfooTECH Global');  // Additional recipient
 
     // Attach images

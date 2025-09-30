@@ -274,7 +274,7 @@ a {
 }
 
 .blog-ajax-loader {
-  top: 110%;
+  top: 90%;
   left: 35%;
   transform: translate(-35%, -50%);
 }

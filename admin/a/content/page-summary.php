@@ -16,10 +16,10 @@
     <div class="grid-div">
         <div class="img-div"><img id="gallery_preview_pix" src="" alt="Gallery"></div>
         <div class="text-div">
-            <div class="top-text"><span id="gallery_sub_title">xxxx</span></div>
-            <h2 id="summary_reg_title">xxxx</h2>
+            <div id="textContainer"></div>
+            <h2 id="summary_reg_title">Loading...</h2>
             <div class="text-in">
-                <div class="text">UPDATED ON: <span id="formattedDate">xxxx</span> | <span id="page_view">0</span> VIEWS </div>
+                <div class="text">UPDATED ON: <span id="formattedDate">Loading...</span></div>
             </div>
         </div>
     </div>

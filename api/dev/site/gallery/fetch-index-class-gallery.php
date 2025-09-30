@@ -14,12 +14,11 @@ if ($apiKey!=$expected_api_key){
 	$publish_id =trim(($_POST['publish_id']));
 
 	$select="SELECT 
-		publish_id, reg_title, reg_pix, class_gallery_sub_title
+		publish_id, reg_title, reg_pix, class_name
 		FROM publish_tab
 		WHERE page_category_id='gallery_category' 
 		AND publish_id LIKE '%$publish_id%' 
-	  	AND class_gallery_sub_title IS NOT NULL 
-		AND class_gallery_sub_title <> '' 
+	  	AND gallery_type_id='CG' 
 		AND status_id=1 
 		ORDER BY RAND()";
 

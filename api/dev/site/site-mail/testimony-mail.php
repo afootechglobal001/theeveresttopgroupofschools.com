@@ -44,10 +44,6 @@ try {
     $mail->setFrom($smtp_username, $sender_name);
     $mail->addReplyTo($support_email, $sender_name); // Reply-to address
     
-    $mail->MessageID = "<" . md5(uniqid(rand(), true)) . "@" . $_SERVER['SERVER_NAME'] . ">";
-
-    $random_id = uniqid(); 
-
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     $send_to=$smtp_username;
     $reciever_name=$fullname;	
@@ -66,7 +62,7 @@ try {
         <strong>Phone Number:</strong> '.$phone.'<br><br>
         <strong>Testimony:</strong> '.$testimony.'<br><br>
     </p>
-    <p><strong>Ar-Rahman Montessori Schools</strong>, we deliver high-quality education and training, equipping students with knowledge, skills, and strong moral values to excel and thrive in their academic journey and beyond. <br/> 
+    <p><strong>' . $thename . '</strong>, we deliver high-quality education and training, equipping students with knowledge, skills, and strong moral values to excel and thrive in their academic journey and beyond. <br/> 
         <strong>Be Inspired,</strong><br/> 
             <img src="cid:logo" width="150px" style="padding:5px; background:#fff; border-radius:4px; margin-top:10px;"></p>
         </div>
@@ -90,8 +86,6 @@ try {
     $mail->addEmbeddedImage('../site-mail/img/mail_header.jpg', 'mail_header');
     $mail->addEmbeddedImage('../site-mail/img/logo.png', 'logo');
 
-    $mail->addCustomHeader('X-Unique-ID', md5(uniqid(rand(), true)));
-    
     // Send the email
     if(!$mail->send()){
         echo 'Not Working';

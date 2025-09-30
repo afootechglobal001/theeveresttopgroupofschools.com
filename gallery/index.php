@@ -53,7 +53,7 @@
 
 
     <section class="others-pg-content-div">
-        <section class="body-div">
+        <section class="body-div net-bg-br">
             <div class="body-div-in">
                 <div class="main-gallery-back-div" id="fetchAllGallery">
                     <script>

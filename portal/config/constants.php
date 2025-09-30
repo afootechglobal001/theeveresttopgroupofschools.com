@@ -2,15 +2,15 @@
 	error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED ^ E_WARNING);
 	$websiteAutoUrl =(isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 	$appName='schoolBolt'; 
-	$clientName='SchoolBolt Edu System';
+	$clientName='The Everest Top Group Of Schools';
 	/////////////////////////////////////////////////////////////////////////////////
-	$clientWebsiteUrl='http://localhost/projects/schoolbolt';
+	$clientWebsiteUrl='http://localhost/projects/theeveresttopgroupofschools.com';
 	//$clientWebsiteUrl='https://schoolbolt.com';
 	$clientWebsiteContactUsUrl=$clientWebsiteUrl.'/contact-us';
 	//$websiteUrl='https://schoolbolt.com/portal'; /// For Live Server Url //
-	$websiteUrl='http://localhost/projects/schoolbolt/portal';
+	$websiteUrl='http://localhost/projects/theeveresttopgroupofschools.com/portal';
 	//$websitePath = $_SERVER['DOCUMENT_ROOT'].'/portal';
-	$websitePath = $_SERVER['DOCUMENT_ROOT'].'/projects/schoolbolt/portal'; //dirname(__FILE__);
+	$websitePath = $_SERVER['DOCUMENT_ROOT'].'/projects/theeveresttopgroupofschools.com/portal'; //dirname(__FILE__);
 	$codeVersion= date('Ymdhis');
 	/////////////////////////////////////////////////////////////////////////////////
 	$userOsBrowser = $_SERVER['HTTP_USER_AGENT'];

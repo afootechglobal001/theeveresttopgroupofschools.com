@@ -604,7 +604,6 @@ function formatDate(date) {
 
 
 function _fetchIndexBlog(){
-	$('#fetchIndexBlog').html('<div class="ajax-loader"><img src="' + website_url + '/all-images/images/spinner.gif" alt="Loading"/></div>').fadeIn("fast");
 	
 	try {
 		$.ajax({
@@ -782,7 +781,6 @@ function _fetchListBlog(){
   
 
 function _fetchRelatedBlog(){
-	$('#fetchRelatedBlog').html('<div class="ajax-loader blog-ajax-loader"><img src="' + website_url + '/all-images/images/spinner.gif" alt="Loading"/></div>').fadeIn("fast");
 	try {
 		$.ajax({
 			type: "POST",
@@ -1084,12 +1082,10 @@ function _fetchAllGallery() {
 						const publish_id = fetch[i].publish_id; 
 						const reg_title = fetch[i].reg_title; 
 						const reg_pix = fetch[i].reg_pix;  
-						const gallery_sub_title = fetch[i].gallery_sub_title; 
 						const documentStoragePath = fetch[i].documentStoragePath; 
 
 						text +=
 						'<div class="main-gallery-div" title="click to view album" onclick="_open_preview_with_id(' + "'gallery-images'" + "," + "'" + publish_id  + "'" +');">'+
-							'<div class="title">'+ gallery_sub_title +'</div>'+
 							'<div class="image-div">'+
 								'<img src="'+ documentStoragePath +'/'+ reg_pix +'" alt="'+ reg_title +'"/>'+
 							'</div>'+
@@ -1099,7 +1095,7 @@ function _fetchAllGallery() {
 									'<h4>'+ reg_title +'</h4>'+
 								'</div>'+
 								'<div class="icon-div">'+
-									'<img src="'+ website_url +'/all-images/images/icon.png" alt="AR-RAHMAN MONTESSORI SCHOOLS Logo"/>'+
+									'<img src="'+ website_url +'/all-images/images/icon.png" alt="The Everest Top Group Of Schools Logo"/>'+
 								'</div>'+
 							'</div>'+
 						'</div>'; 
@@ -1148,13 +1144,13 @@ function _fetchIndexClassGallery() {
 						const publish_id = fetch[i].publish_id; 
 						const reg_title = fetch[i].reg_title; 
 						const reg_pix = fetch[i].reg_pix;  
-						const class_gallery_sub_title = fetch[i].class_gallery_sub_title.toUpperCase();
+						const class_name = fetch[i].class_name.toUpperCase();
 						const documentStoragePath = fetch[i].documentStoragePath; 
 
 						text +=
 						'<div class="cg-carousel__slide js-carousel__slide" data-aos="fade-left" data-aos-duration="1200">'+
 							'<div class="main-gallery-div index-gallery-div" title="click to view album" onclick="_open_preview_with_id(' + "'gallery-images'" + "," + "'" + publish_id  + "'" +');">'+
-								'<div class="title">'+ class_gallery_sub_title +'</div>'+
+								'<div class="title">'+ class_name +'</div>'+
 								'<div class="image-div">'+
 									'<img src="'+ documentStoragePath +'/'+ reg_pix +'" alt="'+ reg_title +'"/>'+
 								'</div>'+
@@ -1164,7 +1160,7 @@ function _fetchIndexClassGallery() {
 										'<h4>'+ reg_title +'</h4>'+
 									'</div>'+
 									'<div class="icon-div">'+
-										'<img src="'+ website_url +'/all-images/images/icon.png" alt="AR-RAHMAN MONTESSORI SCHOOLS Logo"/>'+
+										'<img src="'+ website_url +'/all-images/images/icon.png" alt="The Everest Top Group Of Schools Logo"/>'+
 									'</div>'+
 								'</div>'+
 							'</div>'+
