@@ -46,7 +46,7 @@
         </div>
     </a>
 
-    <a href="https://web.facebook.com/ARMOSLagos" target="_blank" title="Facebook">
+    <a href="https://web.facebook.com/" target="_blank" title="Facebook">
         <div class="chat-div">
             <div class="icon-div" style="background:#2980b9;"><i class="bi-facebook"></i></div>
             <div class="text">Facebook Page </div>

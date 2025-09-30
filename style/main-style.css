@@ -3145,7 +3145,6 @@ header .header-div-in .inner-div nav .mobile-btn:hover {
 .main-pages-content-div {
   color: var(--sub-body-color);
   font-family: body-font;
-  text-align: justify;
   padding: 20px 0px;
 }
 
@@ -3153,11 +3152,21 @@ header .header-div-in .inner-div nav .mobile-btn:hover {
   padding: 0px;
   margin: 0px;
   line-height: 25px;
+  text-align: justify;
 }
 
 .main-pages-content-div h1, h2, h3, h4, h5, h6{
   padding: 0px;
   margin: 0px;
+}
+
+@media all and (max-width: 400px) {
+  .main-pages-content-div {
+    padding: 20px 10px;
+  }
+  .main-pages-content-div h1{
+    font-size: 25px;
+  }
 }
 
 .comment-back-div {

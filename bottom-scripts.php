@@ -18,7 +18,7 @@ AOS.init({
 <div class="media-link-div">
     <a href="tel:+14154944044" title="Call Customer Care">
     <li style="background:#008040;"><i class="bi-telephone-outbound-fill"></i></li></a>
-    <a href="https://web.facebook.com/ARMOSLagos" target="_blank" title="Facebook">
+    <a href="https://web.facebook.com/" target="_blank" title="Facebook">
     <li style="background:#2980b9;"><i class="bi-facebook"></i></li></a>
     <a href="https://twitter.com/" target="_blank" title="Twitter">
     <li style="background:#3498db;"><i class="bi-twitter"></i></li></a>
