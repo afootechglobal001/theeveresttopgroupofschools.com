@@ -50,7 +50,7 @@
                         <button class="btn right-btn" title="Student Portal"><i class="bi-person-fill-check"></i>Student
                             Portal</button>
 
-                        <a href="https://arrahmangroupofschools.com/portal/parent/login" title="Parent Portal"><button
+                        <a href="<?php echo $website_url?>/portal/parent/login" title="Parent Portal"><button
                                 class="btn"><i class="bi-people-fill"></i> Parent Portal</button></a>
                     </div>
                 </div>
